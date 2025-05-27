@@ -1,14 +1,68 @@
 /* Používáme intuitivní výpočet rozměrů prvků. */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
+
 }
+
+:root {
+  --background-primary: #cdddda;
+  --text: #1f2403;
+
+}
+
 
 html {
-  font-family: sans-serif;
+  font-family: sans-seri;
 }
 
-.container {
-  max-width: 20rem;
-  margin-right: auto;
-  margin-left: auto;
+body {
+  margin: 0;
+}
+
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #cdddda;
+  padding: 1.5rem;
+
+}
+
+.game-card {
+  padding: 1.5rem;
+}
+
+.game-info {
+  width: 600px;
+}
+
+.profil-img {
+  width: 200px;
+  height: 200px;
+  background-color: var(--background-primary);
+  border-radius: 60%;
+  align-self: baseline;
+  margin: 20px;
+}
+
+.profil-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.profil-info {
+  width: 400px;
+  height: 300px;
+  background-color: var(--background-primary);
+  border-radius: 20px;
+}
+
+.profil-quote {
+  margin: 20px;
+  font-style: italic;
 }
