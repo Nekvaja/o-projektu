@@ -1,4 +1,3 @@
-/* Používáme intuitivní výpočet rozměrů prvků. */
 *,
 *:before,
 *:after {
@@ -7,36 +6,134 @@
 }
 
 :root {
-  --background-primary: #cdddda;
-  --text: #1f2403;
+  --background-primary: #e6e1d2;
+  --background-secondary: #fcf8ef;
+  --text: #2b221d;
 
 }
 
 
 html {
-  font-family: sans-seri;
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1.2rem;
+  color: var(--text);
 }
 
-body {
+body,
+html {
   margin: 0;
+  height: 100%;
+  margin: 0
 }
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ÚVOD */
+
+/* Header */
 
 
 .page-header {
   display: flex;
   justify-content: space-between;
-  background-color: #cdddda;
-  padding: 1.5rem;
+  background-color: var(--background-primary);
+  padding: 0.5rem 4%;
 
+}
+
+a {
+  color: #2b221d;
+  text-decoration: none;
+  font-family: "Baloo 2";
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Section game-title */
+
+.game-title {
+  background-color: var(--background-primary);
+  text-align: center;
+  font-family: "Playfair Display";
+  font-size: 2rem;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+/* section main */
+
+
+.game-container {
+  background-color: var(--background-secondary);
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+
+.game-info {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 400px;
+  min-width: 40%;
+  aspect-ratio: 3 / 4;
+  padding: 1.5rem;
+  line-height: 1.6;
+}
+
+
+
+.game-img {
+  max-width: 300px;
+  min-width: 35%;
+  background-image: url(img/baton.png);
+  background-size: cover;
+  aspect-ratio: 3 / 4;
+  border-radius: 15px 0 15px 0;
+  box-shadow: 0 6px 6px rgb(146, 146, 146);
+  
 }
 
 .game-card {
-  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.game-info {
-  width: 600px;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  background-color: var(--background-primary);
+  height: 5rem;
 }
+
+/* PROFIL */
+
+
 
 .profil-img {
   width: 200px;
@@ -66,3 +163,13 @@ body {
   margin: 20px;
   font-style: italic;
 }
+
+
+@media (max-width: 840px) {
+  .game-container {
+    flex-direction: column;
+  }
+}
+
+
+
