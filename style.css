@@ -220,6 +220,11 @@ h1 {
   font-style: italic;
 }
 
+.link-github {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
 
 @media (max-width: 840px) {
   .profil-section {
